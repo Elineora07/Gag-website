@@ -7,7 +7,7 @@ from django.core.exceptions import ValidationError
 class RegistrationForm(forms.ModelForm):
     confirm = forms.CharField(max_length=60, widget=forms.PasswordInput, label=_("Parol takroran"))
 
-    def clean_password(self):
+    def clean_confirm(self):
         if self.cleaned_data['confirm'] != self.cleaned_data['password']:
             raise ValidationError(_("Parollar bir xil emas"))
         return self.cleaned_data['confirm']
