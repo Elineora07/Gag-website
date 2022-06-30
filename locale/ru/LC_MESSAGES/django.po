@@ -1,0 +1,97 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-30 12:29+0500\n"
+"PO-Revision-Date: 2022-06-30 12:28+0500\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+"X-Generator: Poedit 2.3\n"
+
+#: client/forms.py:8
+msgid "Parol takroran"
+msgstr "Повторите пароль"
+
+#: client/forms.py:12
+msgid "Parollar bir xil emas"
+msgstr "пароли не совпадают"
+
+#: client/forms.py:20 client/forms.py:34
+msgid "Login"
+msgstr "Авторизоваться"
+
+#: client/forms.py:21 client/forms.py:35
+msgid "Parol"
+msgstr "Пароль"
+
+#: client/forms.py:25
+msgid "Lotin harflari, sonlar va @/./+/- belgilardan iborat bolishi lozim"
+msgstr "Он должен состоять из латинских букв, цифр и символов @/./+/-"
+
+#: client/views.py:17 templates/layouts/base.html:45
+msgid "Ro'yhatdan o'tish"
+msgstr "Регистрация"
+
+#: client/views.py:31
+msgid "Siz muvaffaqiyatli ro'yhatdan o'tdingiz"
+msgstr "Вы успешно зарегистрировались"
+
+#: client/views.py:42 templates/layouts/base.html:41
+msgid "Tizimga kirish"
+msgstr "Авторизоваться"
+
+#: client/views.py:58
+msgid "Xush kelibsiz"
+msgstr "Добро пожаловать"
+
+#: client/views.py:61
+msgid "Login va/yoki parol noto'g'ri"
+msgstr "Логин и/или пароль неверный"
+
+#: client/views.py:69
+msgid "Xayr"
+msgstr "Пока"
+
+#: client/views.py:84 templates/layouts/base.html:30
+msgid "Profil"
+msgstr "Профиль"
+
+#: client/views.py:85
+msgid "Saqlash"
+msgstr "Сохранять"
+
+#: main/models.py:19
+msgid "Kategoriya"
+msgstr "Категория"
+
+#: main/models.py:20
+msgid "Izoh"
+msgstr "Примечание"
+
+#: main/models.py:21
+msgid "Rasm/Video"
+msgstr "Изображение/Видео"
+
+#: main/views.py:24 templates/layouts/base.html:36
+msgid "Yuklash"
+msgstr "Загрузить"
+
+#: main/views.py:27
+msgid "Muvaffaqiyatli qo'shildi"
+msgstr "Добавлено успешно"
+
+#: templates/layouts/base.html:31
+msgid "Chiqish"
+msgstr "Выход"

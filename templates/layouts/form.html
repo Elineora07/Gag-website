@@ -11,7 +11,9 @@
                         {{ form|crispy }}
                 </div>
                 <div class="card-footer">
-                    <button type="submit" class="btn btn-info me-auto">{{ request.title }}</button>
+                    <button type="submit" class="btn btn-info me-auto">
+                        {% if request.button_title %} {{ request.button_title }} {% else %}{{ request.title }} {% endif %}
+                    </button>
                 </div>
             </form>
         </div>
