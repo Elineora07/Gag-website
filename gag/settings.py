@@ -39,8 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'client',
     'main',
+    'bootstrap_pagination',
     'crispy_forms',
-    'crispy_bootstrap5'
+    'crispy_bootstrap5',
 ]
 
 MIDDLEWARE = [
@@ -69,6 +70,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'main.context_processors.categories'
             ],
         },
     },
@@ -83,7 +85,7 @@ WSGI_APPLICATION = 'gag.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'gag',
+        'NAME': 'gagg',
         'USER': 'root',
         'PASSWORD': 'Qwerty123$'
     }
@@ -121,8 +123,8 @@ USE_I18N = True
 USE_TZ = False
 
 LANGUAGES = (
-    ('uz', "O'zbekcha"),
-    ('ru', "Русский")
+    ('uz', "🇸🇱"),
+    ('ru', "🇷🇺")
 )
 
 # Static files (CSS, JavaScript, Images)

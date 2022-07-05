@@ -4,6 +4,7 @@ from client.models import User
 from gag.helpers import UploadTo
 from gag.mixins import TranslateMixin
 from django.utils.translation import gettext_lazy as _
+import os
 
 
 class Category(TranslateMixin, models.Model):
@@ -23,6 +24,22 @@ class Post(models.Model):
     dislike = models.IntegerField(default=0)
     added_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+
+    @property
+    def ext(self):
+        return ((os.path.splitext(self.file.name)[1])[1:]).lower()
+
+    @property
+    def is_image(self):
+        return self.ext in ['jpg', '.jpeg', 'gif', 'png', 'bmp', 'webp']
+
+    @property
+    def is_video(self):
+        return self.ext in ['mp4', 'mpeg']
+
+    @property
+    def is_audio(self):
+        return self.ext in ['mp3', 'wav', 'ogg']
 
 
 class PostComment(models.Model):

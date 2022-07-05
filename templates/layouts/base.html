@@ -1,4 +1,7 @@
 {% load static i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+{% get_available_languages as LANGUAGES %}
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -20,7 +23,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
                 {% if user.is_authenticated %}
                     <li class="nav-item dropdown">
                         <a class="nav-link rounded-circle me-1 user-avatar cover" style="background-image: url('{{ request.user.avatar }}')" data-bs-toggle="dropdown" id="navbarDropdown" href="#">
@@ -44,6 +47,23 @@
                            href="{% url 'client:registration' %}">{% translate "Ro'yhatdan o'tish" %}</a>
                     </li>
                 {% endif %}
+            <li class="nav-item">
+        <ul>
+            <div class="lc">
+                <a href="" data-bs-toggle="dropdown" class="lang-link active text-decoration-none">
+                    {% for l in LANGUAGES %}
+                        {% if l.0 == LANGUAGE_CODE %}
+                            {{ l.1 |slice:':3' }}
+                        {% endif %}
+                    {% endfor %}
+                </a>
+            <div class="dropdown-menu">
+                {% for a in LANGUAGES %}
+                    <a href="/{{ a.0 }}{{ request.get_full_path|slice:"3:"}}" class="dropdown-item">{{ a.1 }}</a>
+                {% endfor %}
+            </div>
+
+        </ul>
             </ul>
         </div>
     </div>

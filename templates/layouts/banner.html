@@ -1,0 +1,34 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n bootstrap_pagination %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-lg-2">
+            <h5 class="text-uppercase text-muted mt-3">{% translate 'Kategoriyalar' %}</h5>
+            {% for category in categories %}
+                <a href="{% url 'main:cat' category.id %}" class="d-flex align-items-center text-black-50">
+                    <span class="d-inline-block cat-img me-2 cover"
+                          style="background-image: url('{{ category.image.url }}')">
+                    </span>
+                    {{ category.name }}
+                </a>
+            {% endfor %}
+        </div>
+        <div class="col-lg-10">
+            <img src="{% static 'img/banner.gif' %}" alt="banner">
+            <div class="row">
+                <div class="col-lg-9">
+                    {% block banner_content %}
+                    {% endblock %}
+                </div>
+                <div class="ms-auto col-lg-3">
+                    <img class="mt-2" style="width: 145px; height: 145px" src="{% static 'img/small-banner.png' %}" alt="">
+                    <img class="mt-2" style="width: 145px; height: 145px" src="{% static 'img/small-banner.png' %}"
+                        alt="">
+                    <img class="mt-2" style="width: 145px; height: 145px" src="{% static 'img/small-banner.png' %}"
+                        alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
