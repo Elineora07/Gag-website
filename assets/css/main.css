@@ -12,3 +12,13 @@
 	height: 16px;
 	width: 16px;
 }
+
+.lc {
+	position: relative;
+	right: -20px;
+	top: -10px;
+	width: 120px;
+	height: 20px;
+  }
+
+  

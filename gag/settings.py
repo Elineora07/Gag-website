@@ -123,8 +123,8 @@ USE_I18N = True
 USE_TZ = False
 
 LANGUAGES = (
-    ('uz', "🇸🇱"),
-    ('ru', "🇷🇺")
+    ('uz', "🇸🇱 O'zbekcha"),
+    ('ru', "🇷🇺 Pусский")
 )
 
 # Static files (CSS, JavaScript, Images)

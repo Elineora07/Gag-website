@@ -47,23 +47,22 @@
                            href="{% url 'client:registration' %}">{% translate "Ro'yhatdan o'tish" %}</a>
                     </li>
                 {% endif %}
-            <li class="nav-item">
-        <ul>
-            <div class="lc">
-                <a href="" data-bs-toggle="dropdown" class="lang-link active text-decoration-none">
-                    {% for l in LANGUAGES %}
-                        {% if l.0 == LANGUAGE_CODE %}
-                            {{ l.1 |slice:':3' }}
-                        {% endif %}
-                    {% endfor %}
-                </a>
-            <div class="dropdown-menu">
-                {% for a in LANGUAGES %}
-                    <a href="/{{ a.0 }}{{ request.get_full_path|slice:"3:"}}" class="dropdown-item">{{ a.1 }}</a>
-                {% endfor %}
-            </div>
-
-        </ul>
+             <li class="nav-item">
+             <div class="lc">
+                    <a href="" data-bs-toggle="dropdown" class="lang-link active text-decoration-none">
+                        {% for l in LANGUAGES %}
+                            {% if l.0 == LANGUAGE_CODE %}
+                                {{ l.1 |slice:':3' }}
+                            {% endif %}
+                        {% endfor %}
+                    </a>
+                    <div class="dropdown-menu">
+                        {% for a in LANGUAGES %}
+                            <a href="/{{ a.0 }}{{ request.get_full_path|slice:"3:"}}" class="dropdown-item">{{ a.1 }}</a>
+                        {% endfor %}
+                    </div>
+             </div>
+             </li>
             </ul>
         </div>
     </div>

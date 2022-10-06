@@ -9,12 +9,18 @@ import os
 
 class Category(TranslateMixin, models.Model):
     translate_fields = ['name']
-
+    
     name_uz = models.CharField(max_length=50)
     name_ru = models.CharField(max_length=50)
     image = models.ImageField(upload_to=UploadTo('category'))
+    
 
-
+class Category(models.Model):
+    name = models.CharField(max_length=60)
+    
+    def __str__(self):
+        return self.name
+    
 class Post(models.Model):
     user = models.ForeignKey(User, on_delete=models.RESTRICT)
     category = models.ForeignKey(Category, on_delete=models.RESTRICT, verbose_name=_('Kategoriya'))
